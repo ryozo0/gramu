@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gramu</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header>
+    <ul>
+      <li><%= link_to "Gramu", root_path %></li>
+      <li><%= link_to "トップページ", root_path %></li>
+      <li><%= link_to "投稿", posts_path %></li>
+    </ul>
+  </header>
+
+<%= yield %>
+
+  <footer>
+    <p>運営会社Fake-Appli株式会社</p>
+    <p>© 2015-2016 Copyright Fake Appli Corp.</p>
+  </footer>
+
+</body>
+</html>
