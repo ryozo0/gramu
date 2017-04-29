@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
 resources :posts, only:[:index, :new, :create, :edit, :update, :destroy]
 
 root 'top#index'
